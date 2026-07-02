@@ -1,0 +1,14 @@
+x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+y = [1, 3, 1, 4, 10, 10, 4, 0, 10, 9, 5]
+sum_x = sum(x)
+sum_x_2 = sum(x ** 2 for x in x)
+sum_x_21 = sum_x ** 2
+sum_y = sum(y)
+pr_x_y = sum(x * y for x, y in zip(x, y))
+a = (11 * pr_x_y - sum_x * sum_y)/(11 * sum_x_2 - sum_x_21)
+a_rounded = round(a, 3)
+b = (sum_y - a_rounded * sum_x)/11
+b_rounded = round(b, 3)
+print(f'a = {a_rounded}')
+print(f'b = {b_rounded}')
+print(f'f(y) = {a_rounded}x + {b_rounded}')
